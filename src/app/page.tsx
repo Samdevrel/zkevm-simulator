@@ -4,27 +4,7 @@ import { useState } from 'react';
 
 interface Transaction {
   type: 'transfer' | 'swap' | 'mint' | 'approve';
-  from: st
-      <header className="border-b-4 border-purple-400 bg-gray-900 p-6">
-        <div className="max-w-6xl mx-auto">
-          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-            <div>
-              <h1 className="text-3xl md:text-4xl font-black">App</h1>
-              <p className="text-gray-400 mt-2">Interactive demo</p>
-            </div>
-            <nav className="flex gap-2">
-              <a href="/" className="px-4 py-2 bg-gray-800 border-2 border-gray-600 hover:border-purple-400 rounded font-bold transition-all">
-                Home
-              </a>
-              <a href="/docs" className="px-4 py-2 bg-purple-500 border-2 border-purple-400 rounded font-bold transition-all">
-                Documentation
-              </a>
-            </nav>
-          </div>
-        </div>
-      </header>
-
-ring;
+  from: string;
   to: string;
   amount: number;
   fee: number;
@@ -298,7 +278,13 @@ export default function Home() {
             Built by <a href="https://x.com/samdevrel" className="text-orange-400 hover:underline">@samdevrel</a>
             {' • '}
             Data is simulated for demo purposes
-          </p>
+          <button
+            onClick={() => window.location.href = '/docs/overview'}
+            className="w-full py-4 bg-purple-500 text-white font-bold border-4 border-purple-400 hover:bg-purple-400 mb-4"
+          >
+            {buttonText}
+          </button>
+                    </p>
         </footer>
       </div>
     </main>
